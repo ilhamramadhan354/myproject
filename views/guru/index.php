@@ -24,7 +24,7 @@ $this->params['breadcrumbs'][]= $this->title;
        
     
 <div class="btn-group">
-         <?= Html::a('Tambah Guru',['create'], ['class' => 'btn btn-success']) ?>
+         <?= Html::a('Tambah Data Guru',['create'], ['class' => 'btn btn-success']) ?>
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>
         <?= Html::resetButton('Reset', ['class' => 'btn btn-default']) ?>
   
