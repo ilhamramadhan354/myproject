@@ -24,7 +24,7 @@
         "2amigos/yii2-table-export-widget": "*",
         "mdmsoft/yii2-upload-file": "dev-master",
         "kartik-v/yii2-grid": "*",
-        "dmstr/yii2-adminlte-asset": "*"
+        "dmstr/yii2-adminlte-asset": "2.*"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",

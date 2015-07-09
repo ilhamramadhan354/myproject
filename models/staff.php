@@ -4,7 +4,7 @@ namespace app\models;
 use Yii;
 
 
-class staff extends \yii\db\ActiveRecod
+class Staff extends \yii\db\ActiveRecord
 	{
 	public static function  tableName()
 	{
@@ -14,12 +14,12 @@ class staff extends \yii\db\ActiveRecod
  {
  	return [
  			[['id', 'nama_staff', 'tempat_lahir', 'tgl_lahir', 'alamat', 'bagian'], 'required'],
- 			[['id'], 'string', max=> 10],
- 			[['nama_staff'], 'string', max=> 25],
- 			[['tempat_lahir'], 'string', max=> 20],
+// 			[['id'], 'string', max=> 10],
+ 			[['nama_staff'], 'string', 'max'=> 25],
+ 			[['tempat_lahir'], 'string', 'max'=> 20],
  			[['tgl_lahir'], 'safe'],
- 			[['alamat'], 'string', max=> 50],
- 			[['bagian'], 'string', max=> 15],
+ 			[['alamat'], 'string', 'max'=> 50],
+ 			[['bagian'], 'string', 'max'=> 15],
  		];
  	}
 
