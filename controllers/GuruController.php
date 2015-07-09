@@ -8,24 +8,13 @@ use app\models\GuruSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpExeption;
 use yii\filters\VerbFilter;
-use yii\filters\AccessControl;
 use dosamigos\tableexport\ButtonTableExport;
 
 class GuruController extends Controller
 {
 	public function behavior()
 	{
-		return[
-                'access' => [
-                'class' => AccessControl::className(),
-                'only' => ['create','update'],
-                'rules' => [
-                    [
-                        'allow' => true,
-                        'roles' => ['@'],
-                    ],
-                    ],
-                    ],		
+		return[		
 			'verb'=> [
 				'class'=> VerbFiltes::className(),
 				'actions'=>[

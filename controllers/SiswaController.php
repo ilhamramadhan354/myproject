@@ -8,7 +8,6 @@ use app\models\SiswaSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpExeption;
 use yii\filters\VerbFilter;
-use yii\filter\AccessControl;
 use yii\data\Pagination;
 
 
@@ -17,16 +16,6 @@ class SiswaController extends Controller
 	public function behavior()
 	{
 		return[
-                'access' => [
-                'class' => AccessControl::className(),
-                'only' => ['create','update'],
-                'rules' => [
-                    [
-                        'allow' => true,
-                        'roles' => ['@'],
-                    ],
-                    ],
-                    ],	
 			'verb'=> [
 				'class'=> VerbFiltes::className(),
 				'actions'=>[
