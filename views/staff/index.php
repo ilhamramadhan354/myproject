@@ -18,7 +18,11 @@ $this->params['breadcrumbs'][]= $this->title;
     <i class="glyphicon glyphicon-list-alt"></i> <?= Html::encode($this->title) ?></h3></div>
         <div class="panel-body">
     
+<<<<<<< HEAD
     <?php //ini awalan ?>
+=======
+    <?php ?>
+>>>>>>> 96aab0aa22ed3269fe857dab7f1691ce4b541db5
     
        
     

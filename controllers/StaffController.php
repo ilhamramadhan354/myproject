@@ -39,13 +39,29 @@ public function actionIndex()
             'totalCount' => $query->count(),
         ]);
 
+<<<<<<< HEAD
         $siswa = $query->orderBy('nama_staff')
+=======
+<<<<<<< HEAD
+        $staff = $query->orderBy('nama_staff')
+=======
+        $siswa = $query->orderBy('nama_staff')
+>>>>>>> 975938f1da414e19c1c1ea3758a79af8b05b6f7d
+>>>>>>> 96aab0aa22ed3269fe857dab7f1691ce4b541db5
             ->offset($pagination->offset)
             ->limit($pagination->limit)
             ->all();
 
         return $this->render('index', [
+<<<<<<< HEAD
             'siswa' => $siswa,
+=======
+<<<<<<< HEAD
+            'staff' => $staff,
+=======
+            'siswa' => $siswa,
+>>>>>>> 975938f1da414e19c1c1ea3758a79af8b05b6f7d
+>>>>>>> 96aab0aa22ed3269fe857dab7f1691ce4b541db5
             'pagination' => $pagination,
             	'searchModel'=> $searchModel,
 		'dataProvider'=> $dataProvider,
@@ -92,7 +108,15 @@ public function actionDelete($id)
 
 protected function findModel($id)
 {
+<<<<<<< HEAD
 if (($model = Staff::findOne($id)) !== null){
+=======
+<<<<<<< HEAD
+if (($model = Staff::findOne($id)) !== null){
+=======
+if (($model = Siswa::findOne($id)) !== null){
+>>>>>>> 975938f1da414e19c1c1ea3758a79af8b05b6f7d
+>>>>>>> 96aab0aa22ed3269fe857dab7f1691ce4b541db5
 	return $model;
 } else {
 		throw new NotFoundHttpExeption('the requested page does not exsit');

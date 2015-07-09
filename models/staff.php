@@ -13,8 +13,17 @@ class Staff extends \yii\db\ActiveRecord
  public function rules()
  {
  	return [
+<<<<<<< HEAD
  			[['nama_staff', 'tempat_lahir', 'tgl_lahir', 'alamat', 'bagian'], 'required'],
 			[['id'], 'string'],
+=======
+<<<<<<< HEAD
+ 			[['nama_staff', 'tempat_lahir', 'tgl_lahir', 'alamat', 'bagian'], 'required'],
+=======
+ 			[['id', 'nama_staff', 'tempat_lahir', 'tgl_lahir', 'alamat', 'bagian'], 'required'],
+>>>>>>> 975938f1da414e19c1c1ea3758a79af8b05b6f7d
+// 			[['id'], 'string', max=> 10],
+>>>>>>> 96aab0aa22ed3269fe857dab7f1691ce4b541db5
  			[['nama_staff'], 'string', 'max'=> 25],
  			[['tempat_lahir'], 'string', 'max'=> 20],
  			[['tgl_lahir'], 'safe'],
