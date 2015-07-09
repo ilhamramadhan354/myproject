@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "963e449e7bb269f4c7d6a1d272c2cc2f",
+    "hash": "abd89d5a26efde5bab03f3bb7d31c901",
     "packages": [
         {
             "name": "2amigos/yii2-date-picker-widget",
@@ -156,16 +156,16 @@
         },
         {
             "name": "almasaeed2010/adminlte",
-            "version": "v2.1.2",
+            "version": "v2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/almasaeed2010/AdminLTE.git",
-                "reference": "406de4e708e84ed0abbc08b09870828254a6b2ef"
+                "reference": "a6c2500da3cb4a333ca436f4f78cf09dd00ca9ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/almasaeed2010/AdminLTE/zipball/406de4e708e84ed0abbc08b09870828254a6b2ef",
-                "reference": "406de4e708e84ed0abbc08b09870828254a6b2ef",
+                "url": "https://api.github.com/repos/almasaeed2010/AdminLTE/zipball/a6c2500da3cb4a333ca436f4f78cf09dd00ca9ba",
+                "reference": "a6c2500da3cb4a333ca436f4f78cf09dd00ca9ba",
                 "shasum": ""
             },
             "type": "library",
@@ -192,7 +192,7 @@
                 "theme",
                 "web"
             ],
-            "time": "2015-06-08 22:41:48"
+            "time": "2015-07-08 21:18:12"
         },
         {
             "name": "bower-asset/bootstrap",
