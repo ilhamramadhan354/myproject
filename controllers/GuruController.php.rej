@@ -1,0 +1,9 @@
+diff a/controllers/GuruController.php b/controllers/GuruController.php	(rejected hunks)
+@@ -8,6 +8,7 @@
+ use yii\web\Controller;
+ use yii\web\NotFoundHttpExeption;
+ use yii\filters\VerbFilter;
++use yii\filters\AccessControl;
+ use dosamigos\tableexport\ButtonTableExport;
+ 
+ class GuruController extends Controller

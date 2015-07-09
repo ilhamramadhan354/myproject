@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "963e449e7bb269f4c7d6a1d272c2cc2f",
+    "hash": "0be87fad6208654645c597036c396539",
     "packages": [
         {
             "name": "2amigos/yii2-date-picker-widget",
@@ -153,6 +153,59 @@
                 "yii"
             ],
             "time": "2014-09-01 22:06:17"
+        },
+        {
+            "name": "aayaresko/yii2-widget-extended-export-menu",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aayaresko/yii2-widget-extended-export-menu.git",
+                "reference": "5790ee6583d631d5057836d30f2fb2cf0e96471d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/aayaresko/yii2-widget-extended-export-menu/zipball/5790ee6583d631d5057836d30f2fb2cf0e96471d",
+                "reference": "5790ee6583d631d5057836d30f2fb2cf0e96471d",
+                "shasum": ""
+            },
+            "require": {
+                "kartik-v/yii2-export": ">=1.2.2",
+                "php": ">=5.3.0"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "aayaresko\\export\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD 3-Clause License"
+            ],
+            "authors": [
+                {
+                    "name": "aayaresko",
+                    "email": "aayaresko@gmail.com"
+                }
+            ],
+            "description": "Extended export menu widget for Yii 2 Framework.",
+            "homepage": "https://github.com/aayaresko/yii2-widget-extended-export-menu",
+            "keywords": [
+                "OpenXML",
+                "csv",
+                "export",
+                "extension",
+                "html",
+                "json",
+                "pdf",
+                "spreadsheet",
+                "text",
+                "widget",
+                "xls",
+                "xlsx",
+                "yii2"
+            ],
+            "time": "2015-07-08 12:04:00"
         },
         {
             "name": "almasaeed2010/adminlte",
@@ -1656,7 +1709,8 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "kartik-v/yii2-export": 20,
-        "mdmsoft/yii2-upload-file": 20
+        "mdmsoft/yii2-upload-file": 20,
+        "aayaresko/yii2-widget-extended-export-menu": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

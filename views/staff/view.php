@@ -5,18 +5,18 @@ use yii\widgets\DetailView;
 
 
 
-$this->title = $model->nama_siswa;
-$this->params['breadcrumbs'][] = ['label' => 'Siswa', 'url'=>['index']];
+$this->title = $model->nama_staff;
+$this->params['breadcrumbs'][] = ['label' => 'Pusat Data Staff', 'url'=>['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="barang-view">
 	<h1><?= Html::encode($this->title) ?></h1>
 	<p>
-		<?= Html::a('Update',['update', 'id' => $model->nisn], ['class' => 'btn btn-primary']) ?>
-		<?= Html::a('Delete',['delete', 'id' => $model->nisn], [
+		<?= Html::a('Perbaru',['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+		<?= Html::a('Hapus',['delete', 'id' => $model->id], [
 					'class' => 'btn btn-danger',
 					'data' => [
-						'confrim' => 'Are you sure you want to delete items?',
+						'confrim' => 'Anda Yakin akan menghapus data ini ?',
 						'method' => 'post',
 					
 						],
@@ -27,14 +27,13 @@ $this->params['breadcrumbs'][] = $this->title;
 	<?= DetailView::widget([
 		'model'=> $model,
 		'attributes'=> [
-			'nisn',
-			'nama_siswa',
+			'nama_staff',
 			'tempat_lahir',
 			'tgl_lahir',
 			'alamat:ntext',
+			'bagian',
 		],
 	]) ?>
-	
 </div>
 
 

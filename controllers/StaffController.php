@@ -3,15 +3,15 @@
 namespace app\controllers;
 
 use Yii;
-use app\models\Siswa;
-use app\models\SiswaSearch;
+use app\models\Staff;
+use app\models\StaffSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpExeption;
 use yii\filters\VerbFilter;
 use yii\data\Pagination;
 
 
-class SiswaController extends Controller
+class StaffController extends Controller
 {
 	public function behavior()
 	{
@@ -29,12 +29,26 @@ class SiswaController extends Controller
 	}
 public function actionIndex()
 {
-	$searchModel = new SiswaSearch();
+	$searchModel = new StaffSearch();
 	$dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+	$query = Staff::find();
+
+        $pagination = new Pagination([
+            'defaultPageSize' => 5,
+            'totalCount' => $query->count(),
+        ]);
+
+        $siswa = $query->orderBy('nama_staff')
+            ->offset($pagination->offset)
+            ->limit($pagination->limit)
+            ->all();
+
         return $this->render('index', [
-           'dataProvider' => $dataProvider,
-			'searchModel' => $searchModel, 
-			          
+            'siswa' => $siswa,
+            'pagination' => $pagination,
+            	'searchModel'=> $searchModel,
+		'dataProvider'=> $dataProvider,
         ]);
 }
 public function actionView($id)
@@ -48,10 +62,10 @@ public function actionView($id)
 
 public function actionCreate()
 {
-	$model = new Siswa();
+	$model = new Staff();
 
 	if($model->load(Yii::$app->request->post()) && $model->save()){
-			return $this->redirect(['view', 'id' => $model->nisn]);
+			return $this->redirect(['view', 'id' => $model->id]);
 	} else {
 		return $this->render('create',[
 				'model' => $model,
@@ -63,7 +77,7 @@ public function actionUpdate($id)
 	$model = $this->findModel($id);
 
 	if($model->load(Yii::$app->request->post()) && $model->save()){
-			return $this->redirect(['view', 'id' => $model->nisn]);
+			return $this->redirect(['view', 'id' => $model->id]);
 	} else {
 		return $this->render('update',[
 				'model' => $model,
@@ -78,7 +92,7 @@ public function actionDelete($id)
 
 protected function findModel($id)
 {
-if (($model = Siswa::findOne($id)) !== null){
+if (($model = Staff::findOne($id)) !== null){
 	return $model;
 } else {
 		throw new NotFoundHttpExeption('the requested page does not exsit');
