@@ -11,8 +11,11 @@ use dosamigos\datepicker\DatePicker;
             <br>
 <?php $form = ActiveForm::begin(); ?>
 
+<<<<<<< HEAD
 <?= $form->field($model, 'id')->textInput() ?>
 
+=======
+>>>>>>> 975938f1da414e19c1c1ea3758a79af8b05b6f7d
 <?= $form->field($model, 'nama_staff')->textInput(['maxlength' => 30]) ?>
 
 <?= $form->field($model, 'tempat_lahir')->textInput(['maxlength' => 20, 'size' => 10]) ?>
